@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function AnimatedPhoto() {
   return (
     <div className="relative w-80 h-80 mx-auto">
-      {/* Animated Gradient Border */}
+      
       <motion.div
         className="absolute inset-0 -inset-4"
         animate={{
@@ -25,7 +25,6 @@ export default function AnimatedPhoto() {
         }}
       />
 
-      {/* Actual Photo with Blob Shape */}
       <motion.div
         animate={{
           borderRadius: ["50% 30% 50% 40%", "40% 50% 40% 50%", "50% 40% 50% 30%", "50% 30% 50% 40%"],
