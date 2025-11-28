@@ -6,27 +6,28 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-8">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 sm:py-0">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center w-full">
 
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          className="text-center md:text-left"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-800 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-800 leading-tight">
             Hi,
             <br />
             <span className="text-blue-600">I'am Jameboy</span>
             <br />
-            <span className="text-4xl md:text-6xl">Web Designer</span>
+            <span className="text-3xl sm:text-4xl lg:text-6xl">Web Designer</span>
           </h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="mt-8 text-xl text-gray-600"
+            className="mt-6 sm:mt-8 text-base sm:text-lg lg:text-xl text-gray-600"
           >
             I craft beautiful, responsive, and user-centered digital experiences.
           </motion.p>
@@ -35,11 +36,11 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="mt-10"
+            className="mt-8 sm:mt-10"
           >
             <Link
               href="/contacts"
-              className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl"
+              className="inline-block bg-blue-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl"
             >
               Contact Me
             </Link>
@@ -50,7 +51,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="flex justify-center"
+          className="flex justify-center mt-8 md:mt-0"
         >
           <AnimatedPhoto />
         </motion.div>
