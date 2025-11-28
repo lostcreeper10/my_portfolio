@@ -1,4 +1,3 @@
-// app/fcfs/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -27,7 +26,6 @@ export default function FCFS() {
   const [btInput, setBtInput] = useState("");
   const [result, setResult] = useState<Result | null>(null);
 
-  // Add new process
   const addProcess = () => {
     if (!atInput || !btInput) return;
     const at = Number(atInput);
@@ -40,12 +38,10 @@ export default function FCFS() {
     setBtInput("");
   };
 
-  // Delete process
   const deleteProcess = (id: number) => {
     setProcesses(processes.filter(p => p.id !== id));
   };
 
-  // Reset everything
   const resetAll = () => {
     setProcesses([]);
     setNextId(1);
@@ -54,7 +50,6 @@ export default function FCFS() {
     setBtInput("");
   };
 
-  // FCFS Calculation
   const calculateFCFS = () => {
     if (processes.length === 0) return;
 
@@ -122,7 +117,6 @@ export default function FCFS() {
           First Come First Served (FCFS)
         </motion.h1>
 
-        {/* Input Panel */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +125,6 @@ export default function FCFS() {
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-gray-800">Add Processes</h2>
 
-          {/* Add Task Input */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
             <input
               type="number"
@@ -160,7 +153,6 @@ export default function FCFS() {
             </motion.button>
           </div>
 
-          {/* Process List */}
           <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
             {processes.length === 0 ? (
               <p className="text-center text-gray-500 py-6 sm:py-8 text-sm sm:text-base">No processes added yet. Add one above!</p>
@@ -188,7 +180,6 @@ export default function FCFS() {
             )}
           </div>
 
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -213,7 +204,6 @@ export default function FCFS() {
           </div>
         </motion.div>
 
-        {/* Results */}
         {result && (
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} className="space-y-8 sm:space-y-10 lg:space-y-12">
             {/* Gantt Chart */}
@@ -242,7 +232,6 @@ export default function FCFS() {
               </div>
             </div>
 
-            {/* Table + Averages */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
               {/* Process Table */}
               <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl p-5 sm:p-6 lg:p-8 overflow-x-auto">
@@ -273,7 +262,6 @@ export default function FCFS() {
                 </table>
               </div>
 
-              {/* Averages */}
               <motion.div
                 initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
