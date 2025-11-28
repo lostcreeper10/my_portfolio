@@ -1,4 +1,4 @@
-// app/about/page.tsx
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -33,7 +33,6 @@ export default function About() {
           </motion.p>
         </motion.div>
 
-        {/* Resume Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +44,6 @@ export default function About() {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0">
 
-            {/* View Resume Button */}
             <a
               href="/resume.pdf"
               target="_blank"
@@ -56,7 +54,6 @@ export default function About() {
               View Resume
             </a>
 
-            {/* Download Resume Button */}
             <a
               href="/resume.pdf"
               download="Jameboy_Escartin_Resume.pdf"
