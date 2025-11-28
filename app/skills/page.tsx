@@ -1,4 +1,3 @@
-// app/skills/page.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -37,7 +36,6 @@ export default function Skills() {
     <section className="min-h-screen py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <div className="max-w-6xl mx-auto">
 
-        {/* Title Only */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +51,6 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
           {skills.map((skill, i) => (
             <motion.div
@@ -78,7 +75,6 @@ export default function Skills() {
                 </span>
               </div>
 
-              {/* Progress Bar */}
               <div className="h-5 sm:h-6 lg:h-7 bg-gray-200/70 rounded-full overflow-hidden shadow-inner">
                 <motion.div
                   initial={{ width: 0 }}
