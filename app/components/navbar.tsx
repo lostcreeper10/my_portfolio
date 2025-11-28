@@ -29,7 +29,6 @@ export default function Navbar() {
           Portfolio
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex gap-10">
           {navItems.map((item) => (
             <Link
@@ -48,7 +47,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden flex flex-col gap-1.5 w-6 h-6 justify-center"
@@ -69,7 +67,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
